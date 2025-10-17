@@ -1,0 +1,196 @@
+/* --- 1. Reseteo Básico y Variables de Color --- */
+
+/* Un pequeño reseteo para que todos los navegadores se comporten igual */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* :root es el lugar perfecto para declarar nuestras variables globales (tu paleta) */
+:root {
+    --color-dark-brown: #483434;
+    --color-light-brown: #6b4f4f;
+    --color-champagne: #eed6c4;
+    --color-off-white: #fff3e4;
+    --color-black: #101211;
+    
+    --font-body: 'Urbanist', sans-serif;
+    /* Añadiremos las otras fuentes aquí después */
+}
+
+
+/* --- 2. Estilos Generales del Body --- */
+
+body {
+    background-color: var(--color-off-white); /* Usamos nuestra variable para el fondo */
+    color: var(--color-dark-brown);           /* Usamos nuestra variable para el texto */
+    font-family: var(--font-body);            /* Usamos nuestra variable para la fuente */
+    line-height: 1.6;                         /* Mejora la legibilidad de los párrafos */
+    display: block;
+}
+
+/* --- 3. Hero Section Styles --- */
+
+.hero {
+    height: 100vh; /* vh = viewport height. 100vh = 100% de la altura de la pantalla */
+    width: 100%;
+    position: relative; /* Esencial para posicionar el contenido y el video dentro de él */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Oculta cualquier parte del video que se salga del contenedor */
+    background-color: var(--color-dark-brown);
+}
+
+.hero__video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía el video al fondo, detrás del contenido */
+}
+
+.hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mágico: asegura que el video cubra todo el contenedor sin deformarse */
+}
+
+.hero__content {
+    /* El contenedor del contenido ya está centrado por Flexbox en .hero */
+    padding: 20px;
+}
+
+.hero__title {
+    font-size: 4rem; /* Un tamaño grande para el título. 'rem' es una unidad flexible */
+    color: var(--color-off-white);
+    font-weight: 700; /* Asumiendo que cargamos un peso de fuente más grueso */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para que el texto sea legible sobre el video */
+    /* Aquí usaremos la fuente Serotiva en el futuro */
+}
+
+.hero__button {
+    display: inline-block; /* Permite aplicar padding y margin */
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-dark-brown);
+    color: var(--color-off-white);
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: 700;
+    border-radius: 50px; /* Píldora/Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+.hero__button:hover {
+    background-color: var(--color-light-brown);
+    transform: translateY(-3px); /* Mueve el botón un poco hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+/* --- 4. Navbar Styles --- */
+
+.navbar {
+    position: sticky; /* La magia sucede aquí */
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 243, 228, 0.9); /* Nuestro --color-off-white con un poco de transparencia */
+    backdrop-filter: blur(10px); /* Efecto de vidrio esmerilado, muy moderno */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidad con Safari */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que la navbar esté por encima de todo */
+    padding: 1rem 0;
+}
+
+.navbar__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-dark-brown);
+    text-decoration: none;
+}
+
+.navbar__links {
+    list-style: none; /* Quita los puntos de la lista */
+    display: flex;
+    gap: 2rem; /* Espacio entre los elementos de la lista */
+}
+
+.navbar__links a {
+    color: var(--color-light-brown);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+    color: var(--color-dark-brown);
+}
+
+
+/* --- 5. Lobby Section Styles --- */
+
+.lobby {
+    padding: 6rem 0; /* Espacio vertical para que no se pegue a la navbar */
+}
+
+.lobby__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lobby__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    /* Aquí usaremos Serotiva */
+}
+
+.lobby__subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 4rem auto; /* Centra y añade espacio abajo */
+    color: var(--color-light-brown);
+}
+
+.lobby__cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 2rem; /* Espacio entre las tarjetas */
+    text-align: left;
+}
+
+.card {
+    background-color: var(--color-champagne);
+    padding: 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--color-dark-brown);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    /* Aquí usaremos Serotiva */
+}
+
+.card__description {
+    color: var(--color-light-brown);
+}
