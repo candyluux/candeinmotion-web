@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CandeinMotion | Servicios</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand">CandeinMotion</a>
+            <ul class="navbar__links">
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html" class="active">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        
+        <section class="services">
+            <div class="services__container">
+                <div class="services__header">
+                    <h2 class="services__title">¿Cómo puedo impulsar tu proyecto?</h2>
+                    <p class="services__intro">
+                        Mi enfoque combina la estrategia de un negocio digital con la creatividad del diseño de experiencias. Haz clic en un pilar para ver los servicios específicos.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-pillar" data-modal-target="#modal-negocios">
+                        <h3 class="service-pillar__title">Impulso de Negocios Digitales</h3>
+                        <p class="service-pillar__description">
+                            Un servicio integral para emprendedores y marcas que buscan no solo tener presencia online, sino construir un ecosistema digital que funcione, convierta y fidelice.
+                        </p>
+                        <span class="service-pillar__cta">Ver servicios específicos &rarr;</span>
+                    </div>
+
+                    <div class="service-pillar" data-modal-target="#modal-interactivos">
+                        <h3 class="service-pillar__title">Diseño de Mundos Interactivos</h3>
+                        <p class="service-pillar__description">
+                            Aquí aplico mi pasión por el diseño de experiencias para dar vida a proyectos que requieren un alto nivel de interacción y usabilidad.
+                        </p>
+                        <span class="service-pillar__cta">Ver servicios específicos &rarr;</span>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        </main>
+
+    <div class="modal" id="modal-negocios">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span> <h2>Impulso de Negocios Digitales</h2>
+            <div class="specific-services">
+                <div class="specific-card">
+                    <h5>Estrategia y Auditoría Digital</h5>
+                    <p>Un análisis profundo de tu presencia online para identificar puntos débiles y oportunidades de crecimiento.</p>
+                </div>
+                <div class="specific-card">
+                    <h5>Diseño y Optimización E-commerce</h5>
+                    <p>Creación o rediseño de tu tienda online con foco en la experiencia de usuario (UX) para mejorar tu conversión.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-interactivos">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span> <h2>Diseño de Mundos Interactivos</h2>
+            <div class="specific-services">
+                <div class="specific-card">
+                    <h5>Diseño de Experiencia (UX/UI)</h5>
+                    <p>El proceso completo de diseño de tu app o plataforma, desde la investigación hasta el prototipo interactivo y el diseño visual final.</p>
+                </div>
+                <div class="specific-card">
+                    <h5>Prototipado y Conceptualización</h5>
+                    <p>Transformamos tu idea abstracta en un prototipo navegable para validar conceptos, presentar a inversores o alinear a tu equipo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js" defer></script> 
+</body>
+</html>
