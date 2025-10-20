@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CandeinMotion | Portfolio</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand">CandeinMotion</a>
+            <ul class="navbar__links">
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        
+        <section class="portfolio">
+            <div class="portfolio__container">
+                <div class="portfolio__header">
+                    <h2 class="portfolio__title">Mi Portfolio</h2>
+                    <p class="portfolio__intro">
+                        Mi universo está en constante expansión. Aquí estoy documentando mis proyectos más recientes. ¡Vuelve pronto para ver las novedades!
+                    </p>
+                </div>
+
+                <div class="portfolio-filters">
+                    <button class="filter-btn active">Mostrar Todo</button>
+                    <button class="filter-btn">Diseño y Estrategia</button>
+                    <button class="filter-btn">Mundos Interactivos</button>
+                    <button class="filter-btn">Investigación</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    
+                    <div class="project-card" data-modal-target="#proyecto-1">
+                        <img src="assets/images/placeholder-proyecto.png" alt="Imagen de proyecto" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Proyecto en Curso 1</h3>
+                            <p class="project-card__category">Diseño y Estrategia</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-modal-target="#proyecto-2">
+                        <img src="assets/images/placeholder-proyecto.png" alt="Imagen de proyecto" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Prototipo de Juego</h3>
+                            <p class="project-card__category">Mundos Interactivos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-modal-target="#proyecto-3">
+                        <img src="assets/images/placeholder-proyecto.png" alt="Imagen de proyecto" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Investigación Académica</h3>
+                            <p class="project-card__category">Investigación</p>
+                        </div>
+                    </div>
+                    
+                    </div> </div>
+        </section>
+        
+    </main>
+
+    <div class="modal" id="proyecto-1">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Proyecto en Curso 1</h2>
+            <img src="assets/images/placeholder-proyecto.png" alt="Imagen de proyecto" class="modal-project__image">
+            
+            <div class="modal-project__details">
+                <p><strong>Rol:</strong> Diseñadora UX/UI</p>
+                <p><strong>Herramientas:</strong> Figma, CSS</p>
+            </div>
+            
+            <p>Aquí va la descripción detallada del proyecto. El desafío era rediseñar la experiencia de usuario para un e-commerce, mejorando el flujo de compra...</p>
+            <a href="#" class="cta-banner__button" style="margin-top: 2rem;">Ver Prototipo</a>
+        </div>
+    </div>
+
+    <div class="modal" id="proyecto-2">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Prototipo de Juego</h2>
+            <img src="assets/images/placeholder-proyecto.png" alt="Imagen de proyecto" class="modal-project__image">
+            
+            <div class="modal-project__details">
+                <p><strong>Rol:</strong> Game Designer, Prototipado</p>
+                <p><strong>Herramientas:</strong> Unity, C#</p>
+            </div>
+            
+            <p>Este fue un proyecto para la universidad donde desarrollamos un prototipo de un juego "roguelite". Mi rol se centró en el diseño de niveles y la mecánica principal del jugador...</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="proyecto-3">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Investigación Académica</h2>
+            
+            <div class="modal-project__details">
+                <p><strong>Área:</strong> Interacción Humano-Computadora</p>
+                <p><strong>Publicación:</strong> Pendiente</p>
+            </div>
+            
+            <p>Participación en el grupo de investigación de la UNPAZ, analizando cómo las interfaces de juego pueden aplicarse para mejorar la retención de información en plataformas educativas...</p>
+            <a href="#" class="cta-banner__button" style="margin-top: 2rem;">Leer Paper (PDF)</a>
+        </div>
+    </div>
+
+    <script src="js/main.js" defer></script> 
+</body>
+</html>
