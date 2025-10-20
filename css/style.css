@@ -1,5 +1,9 @@
 /* --- 1. Reseteo Básico y Variables de Color --- */
 
+html {
+    scroll-behavior: smooth; /* <-- ¡LA MAGIA SUCEDE AQUÍ! */
+}
+
 * {
     margin: 0;
     padding: 0;
