@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CandeinMotion | Blog</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand">CandeinMotion</a>
+            <ul class="navbar__links">
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        
+        <section class="blog">
+            <div class="blog__container">
+                <div class="blog__header">
+                    <h2 class="blog__title">Ideas en Movimiento</h2>
+                    <p class="blog__intro">
+                        Un espacio para reflexiones sobre tecnología, creatividad y todo lo que hay en medio.
+                    </p>
+                </div>
+
+                <div class="blog-tools">
+                    <div class="search-bar">
+                        <input type="search" placeholder="Buscar por palabra clave...">
+                    </div>
+                    <div class="blog-filters">
+                        <button class="filter-btn active">Ver Todo</button>
+                        <button class="filter-btn">Estrategia Digital</button>
+                        <button class="filter-btn">Diseño y UX</button>
+                        <button class="filter-btn">Mundos Interactivos</button>
+                        <button class="filter-btn">Reflexiones</button>
+                    </div>
+                </div>
+
+                <div class="featured-post">
+                    <div class="featured-post__image">
+                        <img src="assets/images/placeholder-blog.png" alt="Imagen de post destacado">
+                    </div>
+                    <div class="featured-post__content">
+                        <p class="post-card__category">Diseño y UX</p>
+                        <h3 class="featured-post__title">Lo que aprendí sobre UX jugando a Valorant</h3>
+                        <p class="featured-post__excerpt">
+                            A primera vista, un e-commerce y un shooter táctico no tienen nada en común. Pero la forma en que Valorant diseña su interfaz de usuario para momentos de alta tensión...
+                        </p>
+                        <a href="post.html" class="post-card__readmore">Leer más &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="blog-grid">
+                    
+                    <div class="post-card">
+                        <div class="post-card__image">
+                            <img src="assets/images/placeholder-blog.png" alt="Imagen de post">
+                        </div>
+                        <div class="post-card__content">
+                            <p class="post-card__category">Estrategia Digital</p>
+                            <h4 class="post-card__title">Por qué tu tienda online necesita una narrativa</h4>
+                            <a href="post.html" class="post-card__readmore">Leer más &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-card__image">
+                            <img src="assets/images/placeholder-blog.png" alt="Imagen de post">
+                        </div>
+                        <div class="post-card__content">
+                            <p class="post-card__category">Reflexiones</p>
+                            <h4 class="post-card__title">La disciplina del baile aplicada al código</h4>
+                            <a href="post.html" class="post-card__readmore">Leer más &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="post-card">
+                        <div class="post-card__image">
+                            <img src="assets/images/placeholder-blog.png" alt="Imagen de post">
+                        </div>
+                        <div class="post-card__content">
+                            <p class="post-card__category">Mundos Interactivos</p>
+                            <h4 class="post-card__title">Diseñando la economía de Los Sims</h4>
+                            <a href="post.html" class="post-card__readmore">Leer más &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    </div> </div>
+        </section>
+        
+    </main>
+
+    <script src="js/main.js" defer></script> 
+</body>
+</html>

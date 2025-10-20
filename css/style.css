@@ -736,3 +736,157 @@ body {
 .social-link:hover {
     transform: translateX(10px);
 }
+
+/* --- 13. Blog Page Styles --- */
+
+.blog {
+    padding: 6rem 0;
+}
+
+.blog__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog__header {
+    max-width: 800px; 
+    margin: 0 auto 4rem auto; 
+    text-align: center;
+}
+
+.blog__title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-brown);
+    /* Usar Serotiva */
+}
+
+.blog__intro {
+    font-size: 1.2rem;
+    color: var(--color-light-brown);
+}
+
+/* Estilos de Búsqueda y Filtros */
+.blog-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.search-bar {
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-champagne);
+    border-radius: 10px;
+    background-color: var(--color-off-white);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--color-dark-brown);
+}
+
+.blog-filters {
+    display: flex;
+    flex-wrap: wrap; /* Para que se apilen en móviles */
+    justify-content: center;
+    gap: 1rem;
+}
+/* Reutilizamos .filter-btn de la pág de portfolio */
+
+
+/* Estilos del Post Destacado */
+.featured-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background-color: var(--color-champagne);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-bottom: 5rem;
+}
+
+.featured-post__image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-post__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-brown);
+    /* Usar Serotiva */
+}
+
+.featured-post__excerpt {
+    font-size: 1.1rem;
+    color: var(--color-light-brown);
+    margin-bottom: 1.5rem;
+}
+
+.post-card__readmore {
+    color: var(--color-dark-brown);
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.post-card__readmore:hover {
+    transform: translateX(5px);
+}
+
+/* Estilos de la Grilla de Posts */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: var(--color-off-white);
+    border: 2px solid var(--color-champagne);
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.post-card__image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.post-card__content {
+    padding: 1.5rem;
+}
+
+.post-card__category {
+    color: var(--color-light-brown);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.post-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-brown);
+    /* Usar Serotiva */
+}
