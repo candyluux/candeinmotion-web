@@ -45,6 +45,28 @@ body {
     background-color: var(--color-dark-brown); /* Fallback si el video no carga */
 }
 
+/* --- NUEVO: Estilos para el Fallback Claro --- */
+.hero--light-fallback {
+    background-color: var(--color-off-white); /* El cremita que querías */
+}
+
+/* El texto será oscuro SOLO si el fondo es claro */
+.hero--light-fallback .hero__title {
+    color: var(--color-dark-brown);
+    text-shadow: none; /* Quitamos la sombra, ya no es necesaria */
+}
+
+/* El botón será oscuro SOLO si el fondo es claro */
+.hero--light-fallback .hero__button {
+    background-color: var(--color-dark-brown);
+    color: var(--color-off-white);
+}
+
+/* El botón hover será más claro SOLO si el fondo es claro */
+.hero--light-fallback .hero__button:hover {
+    background-color: var(--color-light-brown);
+}
+
 .hero__video-container {
     position: absolute;
     top: 0;
