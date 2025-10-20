@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CandeinMotion | Blog Post</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__brand">CandeinMotion</a>
+            <ul class="navbar__links">
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="services.html">Servicios</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        
+        <article class="post-full">
+            <header class="post-header">
+                <div class="post-header__image">
+                    <img src="assets/images/placeholder-blog.png" alt="Imagen de cabecera del post">
+                </div>
+                <div class="post-header__content">
+                    <p class="post-card__category">Diseño y UX</p>
+                    <h1 class="post-header__title">Lo que aprendí sobre UX jugando a Valorant</h1>
+                </div>
+            </header>
+            
+            <div class="post-content">
+                <p>A primera vista, un e-commerce y un shooter táctico no tienen nada en común. Pero la forma en que Valorant diseña su interfaz de usuario (UI) para momentos de alta tensión es una clase magistral de cómo guiar al usuario sin ser intrusivo.</p>
+                
+                <p>En este artículo, vamos a desglosar tres principios de diseño de Valorant que puedes (y debes) aplicar a tu propio proyecto digital, ya sea una tienda online, una app móvil o una plataforma de servicios.</p>
+                
+                <h2>1. El Principio del Foco: Minimizar la Carga Cognitiva</h2>
+                <p>Cuando estás en medio de un tiroteo, no tienes tiempo para leer. Valorant lo sabe. Por eso, la información crucial (vida, munición, habilidades) está en las esquinas de la pantalla, en tu visión periférica. El centro está despejado.</p>
+                
+                <div class="connection-point">
+                    <span class="connection-point__title">Punto de Conexión</span>
+                    <p>En un e-commerce, el "tiroteo" es el checkout. Es el momento de mayor estrés para el usuario. Aquí, tu UI debe hacer lo mismo: eliminar toda distracción. Quita los banners, el menú de navegación, las promociones. Deja solo los campos necesarios para finalizar la compra. Guía el foco, no lo robes.</p>
+                </div>
+                
+                <h2>2. Feedback Inmediato y Claro</h2>
+                <p>Cada acción en el juego tiene una respuesta sonora y visual. Un *headshot* suena diferente a un disparo al cuerpo. Esto le da al jugador un feedback instantáneo sobre su rendimiento.</p>
+                
+                <p>En tu web, esto se traduce en micro-interacciones. Cuando un usuario añade un producto al carrito, ¿aparece una animación sutil? ¿Se actualiza el ícono del carrito visiblemente? Ese pequeño "¡Entendido!" visual genera confianza y seguridad en el usuario.</p>
+                
+                <h2>3. Consistencia es Confianza</h2>
+                <p>Todas las pantallas de compra de armas, menús de agentes y configuraciones en Valorant comparten la misma estructura y lenguaje visual. Aprendes a usar una y sabes usarlas todas.</p>
+
+                <p>Tu sitio web debe ser igual. Tus botones de "Comprar", "Enviar" o "Saber más" deben tener el mismo estilo y color en todas las páginas. La consistencia en el diseño crea una sensación de profesionalismo y reduce la fricción, ya que el usuario no tiene que volver a aprender cómo funciona tu sitio en cada nueva sección.</p>
+                
+            </div>
+        </article>
+        
+        <section class="newsletter-signup">
+            <div class="newsletter-signup__container">
+                <h2>Mantente en Movimiento</h2>
+                <p>Suscríbete a mi newsletter para recibir nuevas ideas, reflexiones y actualizaciones de proyectos directamente en tu bandeja de entrada.</p>
+                <form action="#" class="newsletter-form">
+                    <input type="email" placeholder="Tu email..." required>
+                    <button type="submit" class="cta-banner__button">Suscribirme</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="js/main.js" defer></script> 
+</body>
+</html>

@@ -890,3 +890,130 @@ body {
     color: var(--color-dark-brown);
     /* Usar Serotiva */
 }
+
+/* --- 14. Single Post Page Styles --- */
+
+.post-header {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.post-header__image {
+    width: 100%;
+    height: 450px; /* Imagen de cabecera grande */
+    background-color: var(--color-champagne);
+}
+
+.post-header__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-header__content {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.post-header__title {
+    font-size: 3.5rem;
+    color: var(--color-dark-brown);
+    /* Usar Serotiva */
+}
+
+/* Estilos del cuerpo del artículo */
+.post-content {
+    width: 90%;
+    max-width: 800px; /* Ancho de columna óptimo para leer */
+    margin: 0 auto; /* Centra el contenido */
+    padding-bottom: 6rem;
+}
+
+/* Estilos para el texto dentro del post */
+.post-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--color-dark-brown);
+}
+
+.post-content h2 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    /* Usar Serotiva */
+}
+
+/* Estilos del "Punto de Conexión" */
+.connection-point {
+    background-color: var(--color-champagne);
+    border-left: 5px solid var(--color-dark-brown);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.connection-point__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    display: block;
+    margin-bottom: 0.5rem;
+    /* Aquí podrías usar tu fuente Aminute */
+}
+
+.connection-point p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-light-brown);
+    margin-bottom: 0;
+}
+
+/* --- 15. Newsletter Signup Styles --- */
+
+.newsletter-signup {
+    background-color: var(--color-champagne);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.newsletter-signup__container {
+    width: 90%;
+    max-width: 600px; /* Un contenedor estrecho para enfocar la acción */
+    margin: 0 auto;
+}
+
+.newsletter-signup h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    /* Usar Serotiva */
+}
+
+.newsletter-signup p {
+    font-size: 1.2rem;
+    color: var(--color-light-brown);
+    margin-bottom: 2.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.newsletter-form input {
+    flex-grow: 1; /* Hace que el input ocupe el espacio disponible */
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-dark-brown);
+    border-radius: 10px;
+    background-color: var(--color-off-white);
+}
+
+.newsletter-form button {
+    border: none;
+    cursor: pointer;
+}
+/* Reutilizamos el estilo .cta-banner__button */
