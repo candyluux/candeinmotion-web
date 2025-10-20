@@ -631,3 +631,108 @@ body {
 .modal-project__details p {
     margin-bottom: 0.5rem;
 }
+
+/* --- 12. Contact Page Styles --- */
+
+.contact {
+    padding: 6rem 0;
+}
+
+.contact__container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start; /* Alinea la parte superior de las columnas */
+}
+
+.contact__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-dark-brown);
+    /* Usar Serotiva */
+}
+
+/* Estilos del Formulario */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-light-brown);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border: 2px solid var(--color-champagne);
+    border-radius: 10px;
+    background-color: var(--color-off-white);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-dark-brown);
+    background-color: #fff;
+}
+
+/* Estilos de la Info Derecha */
+.contact-info-wrapper {
+    padding-top: 5.5rem; /* Ajuste para alinear visualmente con el formulario */
+    border-left: 2px solid var(--color-champagne);
+    padding-left: 4rem;
+}
+
+.contact__intro {
+    font-size: 1.2rem;
+    color: var(--color-light-brown);
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+.contact__social-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-link {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-dark-brown);
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateX(10px);
+}
