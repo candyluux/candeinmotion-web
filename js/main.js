@@ -47,4 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    /* === NUEVO: Lógica del Timeline "Sobre Mí" === */
+    
+    // 1. Seleccionar los elementos
+    const timelineButton = document.getElementById('toggle-timeline-btn');
+    const aboutSection = document.getElementById('about');
+
+    // 2. Revisar si el botón existe en la página actual
+    if (timelineButton && aboutSection) {
+        
+        // 3. Añadir el "click listener"
+        timelineButton.addEventListener('click', () => {
+            
+            // 4. Añadir o quitar la clase 'timeline-active' a la sección
+            aboutSection.classList.toggle('timeline-active');
+            
+            // 5. (Opcional) Cambiar el texto del botón
+            if (aboutSection.classList.contains('timeline-active')) {
+                timelineButton.textContent = 'Ver versión resumida';
+            } else {
+                timelineButton.textContent = 'Ver mi recorrido';
+            }
+        });
+    }
+
 });

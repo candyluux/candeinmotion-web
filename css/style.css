@@ -156,10 +156,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar__brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--color-dark-brown);
-    text-decoration: none;
+    font-family: var(--font-serif); /* 1. Usa Serotiva, como dijimos */
+    font-size: 1.75rem;            /* 2. El nuevo tamaño */
+    font-weight: 700;              /* 3. Mantiene la negrita */
+    color: var(--color-dark-brown); /* 4. Anula el azul por defecto */
+    text-decoration: none;         /* 5. ¡Este quita el subrayado! */
 }
 
 .navbar__links {
@@ -278,6 +279,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
     text-align: left; 
     margin-bottom: 4rem;
+    transition: all 0.8s ease-in-out; 
 }
 
 .pilar {
@@ -285,6 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
+    transition: all 0.6s ease-in-out;
 }
 
 .pilar__title {
@@ -308,6 +311,88 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--color-dark-brown);
+}
+
+.about__timeline-toggle {
+    margin-top: 3rem; /* Espacio entre las tarjetas y el botón */
+    text-align: center; /* El contenedor .about__container ya lo centra, pero esto lo asegura */
+}
+
+/* El nuevo contenedor principal */
+.about-content-wrapper {
+    display: grid;
+    /* Por defecto, 1 columna. La galería no tiene espacio. */
+    grid-template-columns: 1fr 0fr;
+    gap: 3rem;
+    transition: all 0.8s ease-in-out;
+}
+
+/* 1. ESTADO INICIAL (OCULTO) */
+
+/* La galería de fotos (columna derecha) está oculta por defecto */
+.about__photo-gallery {
+    opacity: 0;
+    transform: translateX(20px); /* Saldrá desde la derecha */
+    pointer-events: none; /* Evita que se pueda interactuar con ella */
+    transition: all 0.6s ease-in-out;
+}
+.about__photo-gallery img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* El contenido extra de los hitos está oculto por defecto */
+.pilar__timeline-content {
+    max-height: 0; /* No ocupa espacio */
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+.pilar__timeline-content ul {
+    list-style: none;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 2px solid var(--color-champagne);
+}
+.pilar__timeline-content li {
+    color: var(--color-light-brown);
+    margin-bottom: 0.5rem;
+}
+
+
+/* 2. ESTADO ACTIVO (MODO TIMELINE) */
+
+/* Cuando la sección .about tenga la clase .timeline-active... */
+
+/* El wrapper principal se convierte en 2 columnas */
+.about.timeline-active .about-content-wrapper {
+    grid-template-columns: 1fr 1fr; /* 50% y 50% */
+}
+
+/* La grilla de pilares se convierte en 1 columna */
+.about.timeline-active .about__pilares-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Las tarjetas de pilar se hacen más grandes */
+.about.timeline-active .pilar {
+    background-color: #fff; /* Un blanco más brillante para destacar */
+    transform: scale(1.02); /* Se agranda un poquito */
+}
+
+/* La galería de fotos (columna derecha) se HACE VISIBLE */
+.about.timeline-active .about__photo-gallery {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/* El contenido de hitos se HACE VISIBLE */
+.about.timeline-active .pilar__timeline-content {
+    max-height: 200px; /* Le damos altura (ajusta si necesitas más) */
+    opacity: 1;
 }
 
 /* --- 7. Services Page Styles --- */
@@ -1039,4 +1124,18 @@ h1, h2, h3, h4, h5, h6 {
 .newsletter-form button {
     border: none;
     cursor: pointer;
+}
+
+/* --- 16. Refinamientos de Tipografía --- */
+
+/* Aplicar Aminute a la marca en la Navbar */
+.navbar__brand {
+    font-family: var(--font-script);
+    font-size: 2rem; /* Las fuentes script a veces necesitan un ajuste de tamaño */
+}
+
+/* Aplicar Aminute al título del "Punto de Conexión" en el blog */
+.connection-point__title {
+    font-family: var(--font-script);
+    font-size: 1.5rem; /* Ajuste de tamaño */
 }
