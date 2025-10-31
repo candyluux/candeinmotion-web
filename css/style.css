@@ -47,12 +47,12 @@ body {
     color: var(--color-dark-brown);           
     font-family: var(--font-body);            
     line-height: 1.6;                         
-    display: block; /* Asegura el apilamiento vertical */
+    display: block; 
 }
 
 /* Aplicar fuentes a títulos */
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-serif); /* Serotiva para todos los títulos */
+    font-family: var(--font-serif); 
 }
 
 /* --- 3. Hero Section Styles --- */
@@ -68,14 +68,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden; 
 }
 
-/* Estilos para el Fallback Claro */
 .hero--light-fallback {
-    background-color: var(--color-off-white); /* El cremita que querías */
+    background-color: var(--color-off-white); 
 }
 
 .hero--light-fallback .hero__title {
     color: var(--color-dark-brown);
-    text-shadow: none; /* Quitamos la sombra, ya no es necesaria */
+    text-shadow: none; 
 }
 
 .hero--light-fallback .hero__button {
@@ -117,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block; 
     margin-top: 2rem;
     padding: 1rem 2.5rem;
-    background-color: var(--color-dark-brown); /* Botón oscuro, como lo querías */
+    background-color: var(--color-dark-brown); 
     color: var(--color-off-white);
     text-decoration: none; 
     font-weight: 700;
@@ -146,21 +145,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto; 
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar__brand {
-    font-family: var(--font-serif); /* 1. Usa Serotiva, como dijimos */
-    font-size: 1.75rem;            /* 2. El nuevo tamaño */
-    font-weight: 700;              /* 3. Mantiene la negrita */
-    color: var(--color-dark-brown); /* 4. Anula el azul por defecto */
-    text-decoration: none;         /* 5. ¡Este quita el subrayado! */
+    font-family: var(--font-serif); 
+    font-size: 1.75rem;            
+    font-weight: 700;              
+    color: var(--color-dark-brown); 
+    text-decoration: none;         
 }
 
 .navbar__links {
@@ -180,6 +179,9 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-dark-brown);
 }
 
+.navbar__links a.active {
+    color: var(--color-dark-brown);
+}
 
 /* --- 5. Lobby Section Styles --- */
 
@@ -188,10 +190,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lobby__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
     text-align: center;
 }
 
@@ -250,10 +252,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
     text-align: center; 
 }
 
@@ -314,26 +316,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__timeline-toggle {
-    margin-top: 3rem; /* Espacio entre las tarjetas y el botón */
-    text-align: center; /* El contenedor .about__container ya lo centra, pero esto lo asegura */
+    margin-top: 3rem; 
+    text-align: center; 
 }
 
-/* El nuevo contenedor principal */
 .about-content-wrapper {
     display: grid;
-    /* Por defecto, 1 columna. La galería no tiene espacio. */
     grid-template-columns: 1fr 0fr;
     gap: 3rem;
     transition: all 0.8s ease-in-out;
 }
 
-/* 1. ESTADO INICIAL (OCULTO) */
-
-/* La galería de fotos (columna derecha) está oculta por defecto */
 .about__photo-gallery {
     opacity: 0;
-    transform: translateX(20px); /* Saldrá desde la derecha */
-    pointer-events: none; /* Evita que se pueda interactuar con ella */
+    transform: translateX(20px); 
+    pointer-events: none; 
     transition: all 0.6s ease-in-out;
 }
 .about__photo-gallery img {
@@ -343,9 +340,8 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* El contenido extra de los hitos está oculto por defecto */
 .pilar__timeline-content {
-    max-height: 0; /* No ocupa espacio */
+    max-height: 0; 
     opacity: 0;
     overflow: hidden;
     transition: all 0.6s ease-in-out;
@@ -361,37 +357,27 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.5rem;
 }
 
-
-/* 2. ESTADO ACTIVO (MODO TIMELINE) */
-
-/* Cuando la sección .about tenga la clase .timeline-active... */
-
-/* El wrapper principal se convierte en 2 columnas */
 .about.timeline-active .about-content-wrapper {
-    grid-template-columns: 1fr 1fr; /* 50% y 50% */
+    grid-template-columns: 1fr 1fr; 
 }
 
-/* La grilla de pilares se convierte en 1 columna */
 .about.timeline-active .about__pilares-grid {
     grid-template-columns: 1fr;
 }
 
-/* Las tarjetas de pilar se hacen más grandes */
 .about.timeline-active .pilar {
-    background-color: #fff; /* Un blanco más brillante para destacar */
-    transform: scale(1.02); /* Se agranda un poquito */
+    background-color: #fff; 
+    transform: scale(1.02); 
 }
 
-/* La galería de fotos (columna derecha) se HACE VISIBLE */
 .about.timeline-active .about__photo-gallery {
     opacity: 1;
     transform: translateX(0);
     pointer-events: auto;
 }
 
-/* El contenido de hitos se HACE VISIBLE */
 .about.timeline-active .pilar__timeline-content {
-    max-height: 200px; /* Le damos altura (ajusta si necesitas más) */
+    max-height: 200px; 
     opacity: 1;
 }
 
@@ -402,10 +388,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .services__header {
@@ -438,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); 
     cursor: pointer;
     position: relative;
-    padding-bottom: 6rem; /* Espacio para el CTA */
+    padding-bottom: 6rem; 
     transition: all 0.3s ease;
 }
 
@@ -479,10 +465,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .process__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
     text-align: center;
 }
 
@@ -522,10 +508,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-banner__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .cta-banner h2 {
@@ -631,10 +617,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.navbar__links a.active {
-    color: var(--color-dark-brown);
-}
-
 /* --- 11. Portfolio Page Styles --- */
 
 .portfolio {
@@ -642,10 +624,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .portfolio__header {
@@ -763,10 +745,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .contact-grid {
@@ -866,10 +848,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .blog__header {
@@ -1026,10 +1008,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-header__content {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 2rem 0; /* <-- CORREGIDO */
+    padding: 2rem 2rem 0; 
 }
 
 .post-header__title {
@@ -1038,10 +1020,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post-content {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 800px; 
     margin: 0 auto; 
-    padding: 0 2rem 6rem; /* <-- CORREGIDO */
+    padding: 0 2rem 6rem; 
 }
 
 .post-content p {
@@ -1089,10 +1071,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .newsletter-signup__container {
-    width: 100%; /* <-- CORREGIDO */
+    width: 100%; 
     max-width: 600px; 
     margin: 0 auto;
-    padding: 0 2rem; /* <-- CORREGIDO */
+    padding: 0 2rem; 
 }
 
 .newsletter-signup h2 {
@@ -1130,12 +1112,94 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Aplicar Aminute a la marca en la Navbar */
 .navbar__brand {
-    font-family: var(--font-script);
-    font-size: 2rem; /* Las fuentes script a veces necesitan un ajuste de tamaño */
+    font-family: var(--font-serif); /* 1. Usa Serotiva, como dijimos */
+    font-size: 1.75rem;            /* 2. El nuevo tamaño */
+    font-weight: 700;              /* 3. Mantiene la negrita */
+    color: var(--color-dark-brown); /* 4. Anula el azul por defecto */
+    text-decoration: none;         /* 5. ¡Este quita el subrayado! */
 }
 
 /* Aplicar Aminute al título del "Punto de Conexión" en el blog */
 .connection-point__title {
     font-family: var(--font-script);
     font-size: 1.5rem; /* Ajuste de tamaño */
+}
+
+/* --- 17. Accordion Styles (Dentro de Modales) --- */
+
+.specific-services-accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden; /* Clave para que el contenido no se desborde al animar */
+    background-color: var(--color-champagne);
+}
+
+.accordion-header {
+    /* Reseteamos el botón para que parezca un div */
+    background-color: var(--color-champagne);
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    
+    /* Layout para el título y el ícono */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-header h5 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--color-dark-brown);
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-dark-brown);
+    transition: transform 0.3s ease;
+}
+
+/* El contenido oculto */
+.accordion-content {
+    /* Oculto por defecto */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    
+    padding: 0 1.5rem; /* El padding horizontal se mantiene */
+    color: var(--color-light-brown);
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion-content p {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--color-light-brown);
+}
+
+/* El botón CTA dentro del acordeón */
+.accordion-cta {
+    /* Hacemos el botón más pequeño */
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem; /* Espacio al final */
+}
+
+/* --- ESTADO ACTIVO (controlado por JS) --- */
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg); /* Gira el "+" para que sea una "x" */
+}
+
+.accordion-content.active {
+    /* Le damos altura para que se muestre */
+    max-height: 500px; /* Un valor alto para que quepa el contenido */
+    opacity: 1;
 }

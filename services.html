@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>CandeinMotion | Servicios</title>
-
+    
+    <title>Cande in Motion | Servicios</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
@@ -17,11 +18,11 @@
         <div class="navbar__container">
             <a href="index.html" class="navbar__brand">CandeinMotion</a>
             <ul class="navbar__links">
-                <li><a href="about.html">Sobre mí</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="services.html" class="active">Servicios</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="servicios.html" class="active">Servicios</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
@@ -31,7 +32,7 @@
         <section class="services">
             <div class="services__container">
                 <div class="services__header">
-                    <h2 class="services__title">¿Cómo puedo impulsar tu proyecto?</h2>
+                    <h2 class="services__title">Cómo puedo impulsar tu proyecto.</h2>
                     <p class="services__intro">
                         Mi enfoque combina la estrategia de un negocio digital con la creatividad del diseño de experiencias. Haz clic en un pilar para ver los servicios específicos.
                     </p>
@@ -41,7 +42,7 @@
                     <div class="service-pillar" data-modal-target="#modal-negocios">
                         <h3 class="service-pillar__title">Impulso de Negocios Digitales</h3>
                         <p class="service-pillar__description">
-                            Un servicio integral para emprendedores y marcas que buscan no solo tener presencia online, sino construir un ecosistema digital que funcione, convierta y fidelice.
+                            Un servicio integral para emprendedores y marcas que buscan no solo tener presencia online, sino construir un ecosistema digital que funcione.
                         </p>
                         <span class="service-pillar__cta">Ver servicios específicos &rarr;</span>
                     </div>
@@ -57,39 +58,107 @@
             </div>
         </section>
 
-        </main>
+        <section class="process">
+            <div class="process__container">
+                <h2 class="process__title">Mi Proceso de Colaboración</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <span>1</span>
+                        <h3>Descubrimiento</h3>
+                        <p>Una charla inicial para entender a fondo tu proyecto, tu visión y tus objetivos.</p>
+                    </div>
+                    <div class="process-step">
+                        <span>2</span>
+                        <h3>Diseño y Propuesta</h3>
+                        <p>Creo un plan de acción y las primeras maquetas visuales o prototipos de la solución.</p>
+                    </div>
+                    <div class="process-step">
+                        <span>3</span>
+                        <h3>Iteración y Feedback</h3>
+                        <p>Trabajamos juntos, refinando la idea con revisiones constantes hasta que sea perfecta.</p>
+                    </div>
+                    <div class="process-step">
+                        <span>4</span>
+                        <h3>Entrega y Soporte</h3>
+                        <p>Te entrego el proyecto finalizado y quedo disponible para futuras consultas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="cta-banner__container">
+                <h2>¿Listo para poner tus ideas en movimiento?</h2>
+                <a href="contacto.html" class="cta-banner__button">Hablemos de tu proyecto</a>
+            </div>
+        </section>
+        
+    </main>
 
     <div class="modal" id="modal-negocios">
         <div class="modal-content">
-            <span class="modal-close">&times;</span> <h2>Impulso de Negocios Digitales</h2>
-            <div class="specific-services">
-                <div class="specific-card">
-                    <h5>Estrategia y Auditoría Digital</h5>
-                    <p>Un análisis profundo de tu presencia online para identificar puntos débiles y oportunidades de crecimiento.</p>
+            <span class="modal-close">&times;</span>
+            <h2>Impulso de Negocios Digitales</h2>
+            
+            <div class="specific-services-accordion">
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h5>Estrategia y Auditoría Digital</h5>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Aquí va la descripción súper detallada del servicio de auditoría. Podemos hablar del proceso, las herramientas que usamos, y qué tipo de entregable recibirá el cliente.</p>
+                        <a href="contact.html" class="cta-banner__button accordion-cta">Charlemos sobre tu Estrategia</a>
+                    </div>
                 </div>
-                <div class="specific-card">
-                    <h5>Diseño y Optimización E-commerce</h5>
-                    <p>Creación o rediseño de tu tienda online con foco en la experiencia de usuario (UX) para mejorar tu conversión.</p>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h5>Diseño y Optimización E-commerce</h5>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Aquí detallamos el servicio de e-commerce. Desde la creación en TiendaNube o Shopify, hasta la optimización UX de un carrito de compras existente para mejorar la tasa de conversión.</p>
+                        <a href="contact.html" class="cta-banner__button accordion-cta">Quiero mi tienda online</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+            </div> </div>
     </div>
 
     <div class="modal" id="modal-interactivos">
         <div class="modal-content">
-            <span class="modal-close">&times;</span> <h2>Diseño de Mundos Interactivos</h2>
-            <div class="specific-services">
-                <div class="specific-card">
-                    <h5>Diseño de Experiencia (UX/UI)</h5>
-                    <p>El proceso completo de diseño de tu app o plataforma, desde la investigación hasta el prototipo interactivo y el diseño visual final.</p>
+            <span class="modal-close">&times;</span>
+            <h2>Diseño de Mundos Interactivos</h2>
+            
+            <div class="specific-services-accordion">
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h5>Diseño de Experiencia (UX/UI)</h5>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>El servicio de UX/UI detallado: investigación de usuarios (user research), mapas de empatía, user flow, wireframing en baja y alta fidelidad, prototipado interactivo en Figma y el design system final.</p>
+                        <a href="contact.html" class="cta-banner__button accordion-cta">Diseñemos mi app</a>
+                    </div>
                 </div>
-                <div class="specific-card">
-                    <h5>Prototipado y Conceptualización</h5>
-                    <p>Transformamos tu idea abstracta en un prototipo navegable para validar conceptos, presentar a inversores o alinear a tu equipo.</p>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <h5>Prototipado y Conceptualización</h5>
+                        <span class="accordion-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Este servicio es para validar ideas. Tomamos tu concepto y lo convertimos en un prototipo navegable para que puedas presentarlo a inversores, testearlo con usuarios o alinear a tu equipo de desarrollo.</p>
+                        <a href="contact.html" class="cta-banner__button accordion-cta">Contactame por un prototipo</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+            </div> </div>
     </div>
+
 
     <script src="js/main.js" defer></script> 
 </body>
