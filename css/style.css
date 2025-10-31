@@ -249,6 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 .about {
     background-color: var(--color-champagne); 
     padding: 6rem 0;
+    padding-bottom: 6rem;
 }
 
 .about__container {
@@ -1202,4 +1203,20 @@ h1, h2, h3, h4, h5, h6 {
     /* Le damos altura para que se muestre */
     max-height: 500px; /* Un valor alto para que quepa el contenido */
     opacity: 1;
+}
+
+/* --- 18. Footer Styles --- */
+
+.footer {
+    padding: 2.5rem 2rem; /* "Finito" (alto) y con el padding lateral */
+    background-color: var(--color-dark-brown);
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-light-brown);
+    font-size: 0.9rem;
+    font-weight: 700;
 }
